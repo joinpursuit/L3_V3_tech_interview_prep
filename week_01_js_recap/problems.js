@@ -54,8 +54,33 @@ for(let i = 1; i < arr.length; i++)
 }
 
 // Check if palindrome
+/**
+Input a word 
+Output true if the word is the same forward and backward, false it not 
+
+EXAMPLE 
+"racecar" => true
+"book" => false
+
+EDGE Case 
+"" => -1
+
+- create a variable to hold the reverse version of the word 
+- loop through the word from the last character
+    - add each letter from the loop to the variable 
+    - if the variable is equal to the word 
+        - return true 
+- return false
+ */
 function isPalindrome(word) {
+if(word.length === 0) return -1
+
+let reverseW = ""
+for(let i = word.length-1; i >= 0; i--){
+    reverseW += word[i]
     
+}
+   return reverseW === word
 }
 
 module.exports = { reverseString, findMax, isPalindrome };
