@@ -26,8 +26,31 @@ if (str === "") return -1
 }
   
 // Find max in array
-function findMax(arr) {
+/**
+Input an array of numbers
+Output the max number in the array 
 
+EXAMPLE
+[5,10,11,25,9] => 25
+[1,31,26,99,6,25] => 99
+
+EDGE Cases 
+[] => -1
+
+- create a variable equal to the first number in the array, to hold the max number 
+- loop through each number in the array, from the second number 
+    - if the number in the array is greater that the variable set to 0, update the variable to the current number 
+- return the variable after it's compared all the numbers 
+ */
+function findMax(arr) {
+if(arr.length === 0) return -1
+
+let max = arr[0]
+for(let i = 1; i < arr.length; i++)
+    if(arr[i] > max){
+        max = arr[i]
+    }
+    return max
 }
 
 // Check if palindrome
