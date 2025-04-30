@@ -4,7 +4,11 @@ function reverseString(str) {
 }
 
 // Find max in array
-function findMax(arr) {}
+function findMax(arr) {
+  let max = null;
+  arr.forEach((n) => (max = n > max ? n : max));
+  return max;
+}
 
 // Check if palindrome
 function isPalindrome(word) {}
