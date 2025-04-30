@@ -11,6 +11,9 @@ function findMax(arr) {
 }
 
 // Check if palindrome
-function isPalindrome(word) {}
+function isPalindrome(word) {
+  const reversed = word.split('').reverse().join('');
+  return word === reversed;
+}
 
 module.exports = { reverseString, findMax, isPalindrome };
